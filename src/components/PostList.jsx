@@ -46,7 +46,7 @@ const PostList = () => {
     content = <div>Loading...</div>;
   } else if (postStatus === 'succeeded') {
     content = posts.map((post) => (
-      <div key={post.id}>
+      <div className="row" key={post.id}>
         {editPost && editPost.id === post.id ? (
           <>
             <input
