@@ -46,16 +46,16 @@ const PostList = () => {
     content = <div>Loading...</div>;
   } else if (postStatus === 'succeeded') {
     content = posts.map((post) => (
-      <div className="row" key={post.id}>
+      <div className="container" key={post.id}>
         {editPost && editPost.id === post.id ? (
-          <>
+          <div className="input-container">
             <input
               type="text"
               value={editPost.title}
               onChange={(e) => setEditPost({ ...editPost, title: e.target.value })}
             />
             <button onClick={handleSaveEdit}>Save</button>
-          </>
+          </div>
         ) : (
           <>
             <h3>{post.title}</h3>
